@@ -30,7 +30,7 @@ function Details({isDark}:IProps) {
         <h1 className='text-2xl font-bold mb-2'>Skills</h1>
         <div className='px-2 pt-3'>
         {skills.map((skill)=>{
-            return (<div className='inline px-1'><Image key={skill.name} src={`/images/svg${skill.image}`} height={'60px'} width={'60px'} className=""></Image></div>)
+            return (<div key={skill.name} className='inline px-1'><Image  src={`/images/svg${skill.image}`} height={'60px'} width={'60px'} alt={skill.name} className=""></Image></div>)
         })}
         </div>
         
