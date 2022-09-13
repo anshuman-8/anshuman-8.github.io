@@ -9,29 +9,29 @@ interface IProjects{
 
 export const projects: IProjects[] = [
     {
-        title: "Portfolio",
-        description: "This website is built with Next.js and Tailwind CSS. It is hosted on Vercel.",
-        link: "https://portfolio-ashen.vercel.app/",
-        source: "",
-        tags: ["Next.js", "Tailwind CSS", "Vercel"]
+        title: "GitHub Duel",
+        description: " This site compares your GitHub Profile to your friends, and analyses and tells your GitHub profile score too. ",
+        link: "https://githubduel.vercel.app/",
+        source: "https://github.com/anshuman-8/github-duel",
+        tags: ["Next.js", "Tailwind CSS", "Github API", "Vercel"]
     },
     {
-        title: "Portfolio1",
-        description: "This website is built with Next.js and Tailwind CSS. It is hosted on Vercel.",
-        link: "https://portfolio-ashen.vercel.app/",
-        source: "",
-        tags: ["Next.js", "Tailwind CSS", "Vercel"]
+        title: "Pocket Tracker",
+        description: "Pocket tracker is a money management app for every common man's usage.",
+        link: "",
+        source: "https://github.com/anshuman-8/gect_hackathon",
+        tags: ["Flutter", "Firebase", "Dart"]
     }, {
-        title: "Portfolio2",
-        description: "This website is built with Next.js and Tailwind CSS. It is hosted on Vercel.",
-        link: "https://portfolio-ashen.vercel.app/",
-        source: "",
-        tags: ["Next.js", "Tailwind CSS", "Vercel"]
+        title: "Binary Destination Planner",
+        description: "Helps you decide your destination for your next trip, with just two options.",
+        link: "https://benevolent-toffee-72d52c.netlify.app/#/",
+        source: "https://github.com/anshuman-8/binary_travel_planner",
+        tags: ["Flutter", "Unsplash API", "Netlify"]
     }, {
-        title: "Portfolio3",
-        description: "This website is built with Next.js and Tailwind CSS. It is hosted on Vercel.",
-        link: "https://portfolio-ashen.vercel.app/",
-        source: "",
+        title: "Daily Task Tracker",
+        description: "App that ease your daily work, from ToDo and tasks, scanning & generating QR to finding best movie.",
+        link: "",
+        source: "https://github.com/anshuman-8/task-tracker",
         tags: ["Next.js", "Tailwind CSS", "Vercel"]
     }
 ]
