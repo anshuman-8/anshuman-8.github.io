@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 interface IProjects{
     title: string;
     description: string;
@@ -10,8 +11,29 @@ interface IProjects{
 }
 
 function ProjectCard({title,tags,description,link,source}:IProjects) {
+
+    // function useHorizontalScroll() {
+    //     const elRef = useRef();
+    //     useEffect(() => {
+    //       const el = elRef.current;
+    //       if (el) {
+    //         const onWheel = e => {
+    //           if (e.deltaY == 0) return;
+    //           e.preventDefault();
+    //           el.scrollTo({
+    //             left: el.scrollLeft + e.deltaY,
+    //             behavior: "smooth"
+    //           });
+    //         };
+    //         el.addEventListener("wheel", onWheel);
+    //         return () => el.removeEventListener("wheel", onWheel);
+    //       }
+    //     }, []);
+    //     return elRef;
+    //   }
+
   return (
-    <div className='bg-white rounded-xl py-3 px-2 min-w-[250px]'>
+    <div className='bg-white rounded-xl py-3 px-2 md:max-w-[300px] mx-1 my-1 shadow-2xl hover:shadow-sm'>
         <div className='flex flex-row justify-between'>
         <p className='text-2xl pl-2'>{title}</p>
         <a href={link} className='align-baseline text-sm underline px-2'>view</a>

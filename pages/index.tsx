@@ -24,12 +24,13 @@ const Home: NextPage = () => {
         toggle
       </button>
 
-      <main className="bg-orange-100 dark:bg-slate-700 min-h-screen ">
-        <div className='lg:container mx-auto px-10 lg:px-20'>
-        <Profile/>
-        <Details/>
+      <main className="bg-orange-50 dark:bg-slate-700 min-h-screen ">
+        <div className='md:container md:mx-auto px-10 lg:px-20'>
+          <div className='lg:flex lg:flex-row justify-center'>
+            <Profile/>
+            <Details/>
+          </div>
         </div>
-      
       </main>
 
       <footer></footer>

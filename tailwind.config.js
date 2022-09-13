@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    container: {
+      center: true,
+      padding: "7rem"
+    },
   },
   darkMode:'class',
   plugins: [],
