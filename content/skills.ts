@@ -66,7 +66,7 @@ export const skills: ISkills[] = [
         image: "/apollo.svg"
     },
     {
-        name: "Tailwind",
+        name: "Tailwind CSS",
         image: "/tailwind.svg"
     },
     {

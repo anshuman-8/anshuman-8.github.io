@@ -15,21 +15,29 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="title" content="Anshuman Swain" />
         <meta
           name="description"
-          content="Hey, I'm Anshuman Swain, A CSE(AI) undergrad(2025) at Amrita Vishwa Vidhyapeetham,Kerala,India. Checkout my Portfolio and projects I have made."
+          content="Hey, I'm Anshuman Swain, A CSE(AI) undergrad(2025) from India.I like to work on Web & Mobile Apps, and make applications that help people. Checkout my Portfolio and projects that I have made."
         />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://anshuman.8.github.io" />
+        <meta property="og:image:width" content="400" /> 
+        <meta property="og:image:height" content="300" />
         <meta property="og:title" content="Anshuman's Portfolio" />
+        <meta property="og:title:secure_url" content="Anshuman's Portfolio" />
         <meta
           property="og:description"
-          content="Hey, I'm Anshuman Swain, A CSE(AI) undergrad(2025) at Amrita Vishwa Vidhyapeetham,Kerala,India. Checkout my Portfolio and projects I have made."
+          content="Hey, I'm Anshuman Swain, A CSE(AI) undergrad(2025) from India.I like to work on Web & Mobile Apps, and make applications that help people. Checkout my Portfolio and projects that I have made."
         />
         <meta property="og:image" content="/og-image.png" />
+        <meta property="og:image:secure_url" content="/og-image.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary" />
+        <meta property="twitter:creator:id" content="@Anshuman_8_" />
+        <meta property="twitter:title" content="Anshuman's Portfolio" />
+        <meta property="twitter:image" content="https://ibb.co/mG3Dfh8" />
+        <meta property="twitter:description" content="Hey, I'm Anshuman Swain, A CSE(AI) undergrad(2025) from ,India.I like to work on Web & Mobile Apps, and make applications that help people. Checkout my Portfolio and projects that I have made." />
         <link rel="apple-touch-icon" href="/favicon.png" />
         {/* <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
