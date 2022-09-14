@@ -32,6 +32,6 @@ export const projects: IProjects[] = [
         description: "App that ease your daily work, from ToDo and tasks, scanning & generating QR to finding best movie.",
         link: "",
         source: "https://github.com/anshuman-8/task-tracker",
-        tags: ["Next.js", "Tailwind CSS", "Vercel"]
+        tags: ["Flutter", "Dart", "API"]
     }
 ]

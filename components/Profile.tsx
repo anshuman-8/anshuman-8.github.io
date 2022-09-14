@@ -10,7 +10,7 @@ interface IProps {
 function Profile({isDark}:IProps) {
   return (
     <div className='pt-8 max-w-[320px] md:mr-10 lg:mr-20 '>
-      <div className='my-8 align-middle ml-5'>
+      <div className='my-8 align-middle ml-10'>
         <Image src={ProfileImg} alt="anshuman's Image" height={'170px'} width={'170px'} className='rounded-full'></Image>
       </div>
       <div className=''>
@@ -21,7 +21,7 @@ function Profile({isDark}:IProps) {
         <p className=''>I have participated in hackathons and build many projects.</p>
         <p className='py-2'>A member at <a href='https://amfoss.in/' className='hover:text-blue-500 underline'>amFoss</a></p>
         </div>
-        <button className='my-3 border-2 hover:bg-orange-200 active:bg-orange-100 px-2 py-1 rounded-lg dark:active:bg-slate-500 dark:hover:bg-slate-800 shadow-xl active:shadow-sm flex flex-row items-center' 
+        <button className='mt-3 mb-8 border-2 hover:bg-orange-200 active:bg-orange-100 px-2 py-1 rounded-lg dark:active:bg-slate-500 dark:hover:bg-slate-800 shadow-xl active:shadow-sm flex flex-row items-center' 
                 onClick={()=>alert("Resume not found! Will be updated soon.")}><AiOutlineFile size={20} className="mx-1"/>Resume</button>
       </div>
       <div>
@@ -43,7 +43,6 @@ function Profile({isDark}:IProps) {
                 <AiFillMail className='mx-2' size={35}/>
                 <div>Mail</div>
             </a>
-
         </div>
       </div>
     </div>

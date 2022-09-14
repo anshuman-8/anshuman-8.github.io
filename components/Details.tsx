@@ -11,9 +11,9 @@ interface IProps {
 function Details({isDark}:IProps) {
   return (
     <div className='md:max-w-[630px] pt-10 md:pt-24'>
-    <div className='my-7 text-2xl font-bold hover:underline hover:text-blue-500 flex flex-row justify-start items-center'>
+    <div className='mt-1 md:mt-5 mb-7 text-2xl font-bold hover:underline hover:text-blue-500 flex flex-row justify-start items-center'>
         <a href="https://anshuman-8.github.io/blog " className='mr-[0.2rem] hover:mr-3 duration-100'>Blogs</a>
-        <svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26' fill={isDark?'none':'#ffffff'} stroke='#000000' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'>
+        <svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26' fill='none' stroke={!isDark?'#000000':'#ffffff'} strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'>
                 <path d='M5 12h13M12 5l7 7-7 7' />
             </svg>
     </div>
@@ -28,12 +28,11 @@ function Details({isDark}:IProps) {
       </div> 
       <div className='mb-3'>
         <h1 className='text-2xl font-bold mb-2'>Skills</h1>
-        <div className='px-2 pt-3'>
+        <div className='px-2 pt-3 pb-3'>
         {skills.map((skill)=>{
-            return (<div key={skill.name} className='inline px-1'><Image  src={`/images/svg${skill.image}`} height={'60px'} width={'60px'} alt={skill.name} className=""></Image></div>)
+            return (<a key={skill.name}  className=' px-1 inline hover:mb-2'><Image title={skill.name}  src={`/images/svg${skill.image}`} height={'60px'} width={'60px'} alt={skill.name} className="hover:scale-105"></Image></a>)
         })}
         </div>
-        
       </div>
     </div>
   )
