@@ -5,7 +5,7 @@
     "scope" : "/",
     "start_url" : "/",
     "name" : "Anshuman's Portfolio",
-    "short_name" : "portfolio",
+    "short_name" : "Anshuman",
     "description" : "Hey, I'm Anshuman Swain, A CSE(AI) undergrad(2025) from India.I like to work on Web & Mobile Apps, and make applications that help people. Checkout my Portfolio and projects that I have made.",
     "icons" : [{
         "src": "./android-chrome-192x192.png",

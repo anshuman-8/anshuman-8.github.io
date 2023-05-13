@@ -4,6 +4,7 @@ import Profile from '../components/Profile';
 import Details from '../components/Details';
 import Image from 'next/image';
 import { FaMoon, FaSun } from "react-icons/fa";
+import HeroBG from "../public/hero-spiro.svg"
 
 const Home: NextPage = () => {
   const [isDark, setIsDark] = useState(true);
