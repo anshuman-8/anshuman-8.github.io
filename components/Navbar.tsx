@@ -7,7 +7,7 @@ const Navbar = () => {
     const router = useRouter();
 
     const isActive = (path:string) => {
-      return router.pathname === path ? 'text-black dark:text-white underline' : 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white ';
+      return router.pathname === path ? 'text-black dark:text-white underline underline-offset-8' : 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white ';
     };
   
   return (

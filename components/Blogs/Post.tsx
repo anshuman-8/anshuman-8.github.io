@@ -29,7 +29,7 @@ const Post = ({ frontmatter, content }: Props) => {
     <div className="bg-white dark:bg-slate-900 my-2 md:my-3 mx-2 p-6 md:py-20 md:pb-28 rounded-xl md:mx-6 md:px-48 shadow-xl min-h-screen">
       <article>
         <Link href="/blog">
-          <a className="relative top-2 left-4 flex flex-row items-center space-x-2 text-lg hover:underline">
+          <a className="relative top-2 left-2 flex flex-row items-center space-x-2 text-lg hover:underline w-min px-2">
             <LeftArrow />
             <span className="">back</span>
           </a>
