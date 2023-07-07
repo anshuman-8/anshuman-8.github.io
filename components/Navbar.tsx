@@ -11,15 +11,15 @@ const Navbar = () => {
     };
   
   return (
-    <nav className="container mx-auto flex py-6">
-      <div className="px-12 lg:px-24 ">
+    <nav className="md:container mx-auto flex py-6">
+      <div className="px-8 lg:px-24 ">
         <Link href="/" className="">
-        <a className={`text-4xl font-bold mx-5 ${isActive('/')}`}>
+        <a className={`text-3xl md:text-4xl font-bold mx-5 ${isActive('/')}`}>
             Portfolio
           </a>
         </Link>
         <Link href="/blog" className="">
-        <a className={`text-4xl font-bold mx-5 ${isActive('/blog')}`}>
+        <a className={`text-3xl md:text-4xl font-bold mx-5 ${isActive('/blog')}`}>
             Blogs
           </a>
         </Link>

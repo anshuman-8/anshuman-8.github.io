@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <div className="">
       <Navbar/>
-        <main className="container">
+        <main className="">
           <div className="md:container md:mx-auto px-10 lg:px-20">
             <div className="lg:flex lg:flex-row justify-center">
               <Profile />
