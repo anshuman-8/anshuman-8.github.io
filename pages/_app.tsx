@@ -73,11 +73,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       }}
       />
       <div className={isDark ? "dark" : ""}>
-      <div className=' bg-orange-50 dark:bg-slate-700 dark:text-white'>
+      <div className=' bg-orange-50 dark:bg-slate-700 dark:text-white min-h-screen'>
 
         {/* <Navbar/> */}
         <button
-          className="top-5 md:top-12 fixed md:right-16 right-4 "
+          className="top-5 md:top-12 fixed md:right-16 right-4"
           onClick={() => setIsDark(!isDark)}>
           {!isDark ? <FaSun className="icon" color="#F79B08" size={24} /> : <FaMoon className="icon" color="#F4E34F" size={24}/>}
         </button>

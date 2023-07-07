@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -13,7 +12,7 @@ interface Props {
       title: string;
       date?: string;
       cover_image?: string;
-      category?: string[];
+      tags?: string[];
       description?: string;
     };
   }[];
@@ -22,41 +21,52 @@ interface Props {
 const Blog = ({ posts }: Props) => {
   return (
     <main>
-        <Navbar/>
-    <div className="container mx-2 md:mx-5 min-h-max">
-      {/* <h1>Blog Posts</h1> */}
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:mx-12 justify-center">
-        {posts.map((post) => (
-          <a
-            key={post.slug}
-            title={post.frontmatter.title}
-            className="flex flex-col justify-start cursor-pointer  mx-5 md:mx-10 max-w-lg border border-slate-400 rounded-xl dark:bg-slate-200/30 bg-slate-500/5 hover:scale-105 hover:shadow-xl duration-200 my-5 min-w-[250px]"
-            href={`/blog/${post.slug}?title=${encodeURIComponent(
-              post.frontmatter.title
-            )}`}
-          >
-            <>
-            <Image
-              src={`/blog-assets/${post.frontmatter?.cover_image}`}
-              className="w-[435px] rounded-xl mx-auto"
-              alt="Cover"
-              height={300}
-                width={435}
-            />
-            <div className="card-body  mx-4 ">
-              <h3 className="text-2xl font-bold my-2">
-                {post.frontmatter.title}
-              </h3>
-              {/* <h6 className="space-x-3 my-3 text-sm ">{item.tags.map((tag)=>{return <span key={tag} className="bg-slate-400 my-2 break-words px-2 py-1 rounded-xl">{tag}</span>})}</h6> */}
-              <p className=" dark:text-slate-200 text-slate-700 mb-5 font-light text-base">
-                {post.frontmatter.description}
-              </p>
-            </div>
-            </>
-          </a>
-        ))}
+      <Navbar />
+      <div className="container mx-2 md:mx-5 min-h-max">
+        {/* <h1>Blog Posts</h1> */}
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:mx-12 justify-center">
+          {posts.map((post) => (
+            <a
+              key={post.slug}
+              title={post.frontmatter.title}
+              className="flex flex-col justify-start cursor-pointer  mx-5 md:mx-10 max-w-lg border border-slate-400 rounded-xl dark:bg-slate-200/30 bg-slate-500/5 hover:scale-105 hover:shadow-xl duration-200 my-5 min-w-[250px]"
+              href={`/blog/${post.slug}?title=${encodeURIComponent(
+                post.frontmatter.title
+              )}`}
+            >
+              <>
+                <Image
+                  src={`/blog-assets/${post.frontmatter?.cover_image}`}
+                  className="w-[435px] rounded-xl mx-auto"
+                  alt="Cover"
+                  height={300}
+                  width={435}
+                />
+                <div className="card-body  mx-4 ">
+                  <h3 className="text-2xl font-bold my-2">
+                    {post.frontmatter.title}
+                  </h3>
+                  <h6 className="space-x-3 my-3 text-sm ">
+                    {post.frontmatter.tags?.map((tag) => {
+                      return (
+                        <span
+                          key={tag}
+                          className="bg-slate-400 my-2 break-words px-2 py-1 rounded-xl"
+                        >
+                          {tag}
+                        </span>
+                      );
+                    })}
+                  </h6>
+                  <p className=" dark:text-slate-200 text-slate-700 mb-5 font-light text-base">
+                    {post.frontmatter.description}
+                  </p>
+                </div>
+              </>
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
     </main>
   );
 };
