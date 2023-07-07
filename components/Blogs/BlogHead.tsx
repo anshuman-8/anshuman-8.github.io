@@ -12,7 +12,6 @@ interface FrontmatterProps {
 }
 
 export default function BlogHead({ frontmatter }: FrontmatterProps) {
-  console.log(frontmatter)
   return (
     <header>
       <div className="my-5 flex-col">

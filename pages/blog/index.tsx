@@ -23,8 +23,7 @@ const Blog = ({ posts }: Props) => {
     <main>
       <Navbar />
       <div className="container mx-2 md:mx-5 min-h-max">
-        {/* <h1>Blog Posts</h1> */}
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:mx-12 justify-center">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:mx-6 justify-center">
           {posts.map((post) => (
             <a
               key={post.slug}
@@ -58,7 +57,7 @@ const Blog = ({ posts }: Props) => {
                       );
                     })}
                   </h6>
-                  <p className=" dark:text-slate-200 text-slate-700 mb-5 font-light text-base">
+                  <p className=" dark:text-slate-100 text-slate-700 mb-5 font-light text-base">
                     {post.frontmatter.description}
                   </p>
                 </div>

@@ -1,12 +1,12 @@
 ---
 title: State Management with Context API
 slug: my-Awesome-Blog-Post
-description: Well hello thisis dsf askd fnsdfjk asdkbgkas dfkhabsdng baksdf gnabgfknasdjkfhkasd fkhabsdfkabskdfbamnsdf babsdfnbasd
-date: "2023-07-06"
+description: Make state & variables available to all components in react application without prop drilling
+date: "20 Aug 2022"
 tags:
-  - Context
+  - ContextAPI
+  - web
   - React
-  - web development
 cover_image: State-management-with-ContextAPI-in-React-1.png
 ---
 
@@ -120,5 +120,5 @@ To check its implementation lets use an example of providing user data throughou
 
 
 
-![Smash Prop drills](/blog-assets/State-management-with-ContextAPI-in-React-1.png "You just killed all Prop drillings")
+![Smash Prop drills](/blog-assets/State-management-with-ContextAPI-in-React-2.jpg "You just killed all Prop drillings")
 

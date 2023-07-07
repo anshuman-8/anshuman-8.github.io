@@ -6,7 +6,6 @@ import ReadingBar from "../../components/Blogs/ReadingBar";
 import Post from "../../components/Blogs/Post";
 import {remark} from 'remark'
 import html from 'remark-html'
-import { log } from "console";
 
 const BlogPost = ({frontmatter, content}) => {
   return (
@@ -52,7 +51,6 @@ export async function getStaticPaths() {
     const { data, content } = matter(markdownWithMetadata);
 
     const contentResult = await remark().use(html).process(content)
-      log(contentResult.toString())
     return {
       props: {
         frontmatter: data,
