@@ -9,11 +9,7 @@ import {
   AiOutlineFile,
 } from "react-icons/ai";
 
-interface IProps {
-  isDark: boolean;
-}
-
-function Profile({ isDark }: IProps) {
+function Profile() {
 
   const onButtonClick = () => {
     fetch("Anshuman-Resume.pdf").then((response) => {

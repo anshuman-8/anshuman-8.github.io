@@ -1,9 +1,22 @@
 import '../styles/globals.css'
 import Head from 'next/head';
+import { useEffect,useState } from 'react';
 import type { AppProps } from 'next/app'
 import SEO from "@bradgarropy/next-seo"
+import { FaMoon, FaSun } from "react-icons/fa";
+import Navbar from '../components/Navbar';
 
 function MyApp({ Component, pageProps }: AppProps) {
+
+  const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    setIsDark(
+        (window.matchMedia("(prefers-color-scheme:light)").matches
+          ? false
+          : true)
+    );
+  }, []);
  
   return (<>
      <Head>
@@ -59,7 +72,18 @@ function MyApp({ Component, pageProps }: AppProps) {
         card: "summary_large_image",
       }}
       />
-   <Component {...pageProps} />
+      <div className={isDark ? "dark" : ""}>
+      <div className=' bg-orange-50 dark:bg-slate-700 dark:text-white min-h-screen'>
+
+        {/* <Navbar/> */}
+        <button
+          className="top-7 md:top-12 fixed md:right-16 right-6"
+          onClick={() => setIsDark(!isDark)}>
+          {!isDark ? <FaSun className="icon" color="#F79B08" size={24} /> : <FaMoon className="icon" color="#F4E34F" size={24}/>}
+        </button>
+        <Component {...pageProps} />
+      </div>
+      </div>
   </>)
 }
 
