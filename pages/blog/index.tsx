@@ -22,7 +22,7 @@ const Blog = ({ posts }: Props) => {
   return (
     <main>
       <Navbar />
-      <div className="container mx-2 md:mx-5 min-h-max">
+      <div className="container mx-2 md:mx-5 py-4 md:py-10 min-h-max">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:mx-6 justify-center">
           {posts.map((post) => (
             <a
@@ -50,7 +50,7 @@ const Blog = ({ posts }: Props) => {
                       return (
                         <span
                           key={tag}
-                          className="bg-slate-400 my-2 break-words px-2 py-1 rounded-xl"
+                          className="bg-slate-600 text-slate-200 rounded-xl text-xs md:text-sm px-1 md:px-3 py-[2px] md:py-2 mx-[2px]"
                         >
                           {tag}
                         </span>

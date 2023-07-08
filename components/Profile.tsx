@@ -12,7 +12,7 @@ import {
 function Profile() {
 
   const onButtonClick = () => {
-    fetch("Anshuman-Resume.pdf").then((response) => {
+    fetch("Anshuman-resume.pdf").then((response) => {
       response.blob().then((blob) => {
         const fileURL = window.URL.createObjectURL(blob);
         let alink = document.createElement("a");

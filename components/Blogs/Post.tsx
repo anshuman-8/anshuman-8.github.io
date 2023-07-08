@@ -36,12 +36,12 @@ const Post = ({ frontmatter, content }: Props) => {
         </Link>
 
         <BlogHead frontmatter={frontmatter} />
-        <main className="prose-base md:prose-xl md:prose-slate prose-code:overflow-auto prose-code:font-semibold  prose-a:underline prose-a:text-blue-600">
+        <main className="prose-base md:prose-xl md:prose-slate prose-code:overflow-auto prose-code:font-semibold  prose-a:underline prose-a:text-blue-600 dark:font-light">
           <div
             dangerouslySetInnerHTML={{
               __html: content.replace(
                 /<pre>/g,
-                '<pre class="bg-slate-100 dark:bg-slate-800 overflow-auto shadow-inner">'
+                '<pre class="bg-slate-100 dark:bg-slate-800 overflow-auto shadow-inner dark:text-slate-300">'
               ).replace(/<img>/g, '<img class="rounded-xl shadow-xl">'),
             }}
           />

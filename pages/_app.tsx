@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       </Head>
       <SEO 
-      title="Anshuman's Portfolio"
+      title="Anshuman Swain"
       description="Hey, I'm Anshuman Swain, A CSE(AI) undergrad(2025) from India.I like to work on Web & Mobile Apps, and make applications that help people. Checkout my Portfolio and projects that I have made."
       keywords={["Anshuman","anshuman","Anshuman Swain","Anshuman's Portfolio","Developer","software developer","website","blog","portfolio","Anshuman's personal portfolio"]}
       icon={"/favicon.ico"}
@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       
       facebook={{
         image: "/og-image.png",
-        url: "https://anshuman.8.vercel.io",
+        url: "https://anshuman.8.vercel.app/",
         type: "website",
       }}
       twitter={{
