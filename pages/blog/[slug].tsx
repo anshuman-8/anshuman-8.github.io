@@ -1,12 +1,14 @@
+import {useState, useEffect} from 'react'
+
 import fs from "fs";
 import path from "path";
 import React from 'react';
-import matter from "gray-matter";
-import ReadingBar from "../../components/Blogs/ReadingBar";
-import Post from "../../components/Blogs/Post";
+import Head from 'next/head'
 import {remark} from 'remark'
 import html from 'remark-html'
-import Head from 'next/head'
+import matter from "gray-matter";
+import LoadingBar from 'react-top-loading-bar'
+import Post from "../../components/Blogs/Post";
 
 interface Props {
   frontmatter: {
@@ -20,6 +22,23 @@ interface Props {
 }
 
 const BlogPost = ({frontmatter, content}:Props) => {
+
+  const [progress, setProgress] = useState(2)
+
+  useEffect(() => {
+    window.addEventListener('scroll', scrollHeight);
+    return () => window.removeEventListener('scroll', scrollHeight);
+  });
+
+  const scrollHeight = () => {
+    var el = document.documentElement;
+    var ScrollTop = el.scrollTop || document.body.scrollTop;
+    var ScrollHeight = el.scrollHeight || document.body.scrollHeight;
+    var percent = (ScrollTop / (ScrollHeight - el.clientHeight)) * 100;
+    // store percentage in state
+    setProgress(percent);
+  };
+
   return (
     <div> 
       <Head>
@@ -32,13 +51,8 @@ const BlogPost = ({frontmatter, content}:Props) => {
 
       <div className="mx-auto">
         <div className="flex flex-row p-auto dark:bg-primary-dark bg-secondary-light ">
-          {/* // left */}
-          <div className="hidden md:flex items-center fixed top-1/4 transform -translate-y-1/2 w-0 md:w-28 md:pb-5 md:pt-5 h-screen">
-            <ReadingBar />
-          </div>
-
-          {/* right */}
-          <div className=" w-full md:w-[87%] md:my-2.5 md:pl-[16vw]  mx-auto">
+          <LoadingBar color="#60a5fa" progress={progress} height={4} onLoaderFinished={()=>setProgress(100)}/>
+          <div className=" w-full max-w-6xl md:my-2.5  mx-auto">
             <Post frontmatter={frontmatter} content={content} />
           </div>{" "}
         </div>
