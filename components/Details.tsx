@@ -1,9 +1,8 @@
 import React from 'react';
-import ProjectCard from './ProjectCard';
-import {projects} from '../details/projects';
-import {skills} from '../details/skills';
 import Image from 'next/image';
-import Link from 'next/link'
+import ProjectCard from './ProjectCard';
+import {skills} from '../details/skills';
+import {projects} from '../details/projects';
 
 
 function Details() {

@@ -15,14 +15,13 @@ export default function BlogHead({ frontmatter }: FrontmatterProps) {
   return (
     <header>
       <div className="my-5 flex-col">
-        <div className="prose-base text-xl md:text-3xl text-center mt-8 text-gray-800 dark:text-gray-50 mb-14 leading-relaxed">
+        <div className="prose-base text-lg md:text-2xl lg:text-3xl text-center mt-8 text-gray-800 dark:text-gray-50 mb-14 leading-relaxed">
           <h1>{frontmatter.title}</h1>
         </div>
 
         <div className="flex flex-row my-5 align-middle">
           <div>
-            {" "}
-            <TagIcon className={"fill-blue-700 dark:fill-blue-400 h-6 w-6"}/>
+            <TagIcon className={"fill-blue-700 dark:fill-blue-400 h-6 w-6"} />
           </div>
           <div className="ml-3">
             {frontmatter.tags?.map((tag) => {
