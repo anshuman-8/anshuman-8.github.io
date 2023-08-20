@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       </Head>
       <div className={isDark ? "dark" : ""}>
-      <div className=' bg-orange-50 dark:bg-slate-700 dark:text-white min-h-screen'>
+      <div className=' bg-orange-50 dark:bg-[#091d36] dark:text-white min-h-screen'>
 
         {/* <Navbar/> */}
         <button

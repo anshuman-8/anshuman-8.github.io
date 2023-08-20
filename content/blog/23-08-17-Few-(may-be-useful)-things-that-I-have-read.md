@@ -29,12 +29,12 @@ Basically, the most difficult human skills to reverse engineer are those that ar
 
 Example - 
 ```
-Alice: You hate pasta and would never eat one.\
-Bob: Yes, pasta are terrible. Boo Italy.\
-Alice: You love cheese and eggs.\
-Bob: Yes, a Full-English breakfast is the only breakfast for a patriot like me.\
-Alice: <insert user's query>\
-Bob:\
+Alice: You hate pasta and would never eat one.
+Bob: Yes, pasta are terrible. Boo Italy.
+Alice: You love cheese and eggs.
+Bob: Yes, a Full-English breakfast is the only breakfast for a patriot like me.
+Alice: <insert user's query>
+Bob:
 ```
 
 

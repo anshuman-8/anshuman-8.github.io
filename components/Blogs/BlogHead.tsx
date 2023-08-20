@@ -15,7 +15,7 @@ export default function BlogHead({ frontmatter }: FrontmatterProps) {
   return (
     <header>
       <div className="my-5 flex-col">
-        <div className="prose-base text-lg md:text-2xl lg:text-3xl text-center mt-8 text-gray-800 dark:text-gray-50 mb-14 leading-relaxed">
+        <div className="prose-base text-base md:text-xl lg:text-2xl text-center mt-8 text-gray-800 dark:text-gray-50 mb-14 leading-relaxed">
           <h1>{frontmatter.title}</h1>
         </div>
 

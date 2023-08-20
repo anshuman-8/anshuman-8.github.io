@@ -27,7 +27,7 @@ const Post = ({ frontmatter, content }: Props) => {
   );
 
   return (
-    <div className="bg-white dark:bg-slate-900 my-2 md:my-3 mx-2 p-6 md:py-20 md:pb-28 rounded-xl md:mx-6 md:px-48 shadow-xl min-h-screen">
+    <div className="bg-white dark:bg-[#0b1324] my-2 md:my-3 mx-2 p-6 md:py-20 md:pb-28 rounded-xl md:mx-6 md:px-48 shadow-xl min-h-screen">
       <article>
         <div className="flex flex-row justify-between">
           <Link href="/blog">

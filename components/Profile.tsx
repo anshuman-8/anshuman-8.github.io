@@ -84,7 +84,7 @@ function Profile() {
             className="flex flex-row items-center hover:underline"
           >
             <AiOutlineTwitter className="mx-2" size={35} />
-            <span>Twitter</span>
+            <span>X (Twitter)</span>
           </a>
           <a
             href="https://www.linkedin.com/in/anshuman-swain-1529b2219/"

@@ -46,7 +46,7 @@ const Blog = ({ posts }: Props) => {
             <a
               key={post.slug}
               title={post.frontmatter.title}
-              className="flex flex-col justify-start cursor-pointer mx-1 md:mx-5 lg:mx-7 max-w-lg border border-slate-400 rounded-lg dark:bg-slate-200/30 bg-slate-500/5 hover:scale-105 hover:shadow-xl duration-200 my-5 min-w-[280px]"
+              className="flex flex-col justify-start cursor-pointer mx-1 md:mx-5 lg:mx-7 max-w-lg border border-slate-400 dark:border-slate-700 rounded-lg dark:bg-[#0d171f]/40 bg-slate-200/30 hover:scale-105 hover:shadow-xl duration-200 my-5 min-w-[280px]"
               href={`/blog/${post.slug}?title=${encodeURIComponent(
                 post.frontmatter.title
               )}`}
@@ -68,7 +68,7 @@ const Blog = ({ posts }: Props) => {
                       return (
                         <span
                           key={tag}
-                          className="bg-slate-600 text-slate-200 rounded-xl text-xs md:text-sm px-2 md:px-3 py-[2px] md:py-2 mx-[2px]"
+                          className="bg-slate-600 dark:bg-slate-800 text-slate-200 rounded-xl text-xs md:text-sm px-2 md:px-3 py-[2px] md:py-2 mx-[2px]"
                         >
                           {tag}
                         </span>

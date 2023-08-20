@@ -9,6 +9,20 @@ interface IProjects{
 
 export const projects: IProjects[] = [
     {
+        title: "Amrita Stewardship",
+        description: "A Web app for doctors to manage septic patients, and manage their daily reports",
+        // link: "https://githubduel.vercel.app/",
+        source: "https://github.com/anshuman-8/antibiotic-stewardship-site",
+        tags: ["Next.js", "Medical", "Django", "GraphQL"]
+    },
+    {
+        title: "CIR Internship Portal",
+        description: "Portal for the CIR Department of my college so that they can conveniently approve and validate the internships receved by students",
+        link: "https://cir-internship.vercel.app/",
+        source: "https://github.com/anshuman-8/github-duel",
+        tags: ["Next.js", "MongoDB"]
+    },
+    {
         title: "GitHub Duel",
         description: " This site compares your GitHub Profile to your friends, and analyses and tells your GitHub profile score too. ",
         link: "https://githubduel.vercel.app/",
