@@ -24,8 +24,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:image" content="/og-image.png" />
         <meta property="og:image:secure_url" content="/og-image.png" />
         <meta property="og:author" content="Anshuman Swain"/>
-
+        {/*Google tag (gtag.js)  */}
+        
       </Head>
+      
       <div className={isDark ? "dark" : ""}>
       <div className=' bg-orange-50 dark:bg-[#091d36] dark:text-white min-h-screen'>
 

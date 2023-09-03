@@ -10,7 +10,6 @@ import {
 } from "react-icons/ai";
 
 function Profile() {
-
   const onButtonClick = () => {
     fetch("Anshuman-resume.pdf").then((response) => {
       response.blob().then((blob) => {
@@ -24,7 +23,7 @@ function Profile() {
   };
 
   return (
-    <div className="pt-8 max-w-[320px] md:mr-10 lg:mr-20 ">
+    <div className="">
       <div className="my-8 align-middle ml-10">
         <Image
           src={ProfileImg}
@@ -37,6 +36,7 @@ function Profile() {
       <div className="">
         <h1 className="text-3xl font-bold">I&apos;m Anshuman Swain</h1>
         <div className="my-5 text-base text-gray-700 dark:text-white">
+          <p className="py-2">20 y/o</p>
           <p className="">
             A CSE(AI) undergrad(2025) at{" "}
             <a href="https://www.amrita.edu/" className="hover:text-blue-500">
@@ -44,12 +44,9 @@ function Profile() {
             </a>{" "}
             , Kerala, India.
           </p>
-          <p className="py-2">
-            I like to work on Web & Mobile Apps, and make applications that help
-            people.
-          </p>
-          <p className="">
-            I have participated in hackathons and build many projects.
+          <p className="py-3">
+            AI enthusiast, proficient in Machine Learning, Computer Vision, and developing
+            amazing Web and Mobile apps.
           </p>
           <p className="py-2">
             A member at{" "}

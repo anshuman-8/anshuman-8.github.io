@@ -6,6 +6,10 @@ interface ISkills{
 
 export const skills: ISkills[] = [
     {
+        name: "PyTorch",
+        image: "/pytorch.svg"
+    },
+    {
         name: "Next.js",
         image: "/nextjs.svg"
     },
@@ -25,10 +29,10 @@ export const skills: ISkills[] = [
         name: "Javascript",
         image: "/javascript.svg"
     },
-    {
-        name: "Express.js",
-        image: "/express.svg"
-    },
+    // {
+    //     name: "Express.js",
+    //     image: "/express.svg"
+    // },
     {
         name: "TypeScript",
         image: "/typescript.svg"
