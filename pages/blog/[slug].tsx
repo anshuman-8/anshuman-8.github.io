@@ -47,7 +47,7 @@ const BlogPost = ({frontmatter, content}:Props) => {
         icon={"/favicon.ico"}
         keywords={frontmatter.tags}
         twitter = {{
-          image: `/blog-assets/${frontmatter.cover_image}`,
+          image: `https://anshuman-8.vercel.app/blog-assets/${frontmatter.cover_image}`,
           card: "summary_large_image",
           site: "@an8human",
         }}

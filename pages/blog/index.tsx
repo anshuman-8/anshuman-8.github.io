@@ -40,40 +40,35 @@ const Blog = ({ posts }: Props) => {
         }}
       />
       <Navbar />
-      <div className="container mx-1 md:mx-5 py-4 md:py-10 min-h-max">
+      <div className="md:container md:mx-auto mx-1 py-4 md:py-10 min-h-max">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:mx-6 justify-center">
           {posts.map((post) => (
             <a
               key={post.slug}
               title={post.frontmatter.title}
-              className="flex flex-col justify-start cursor-pointer mx-1 md:mx-5 lg:mx-7 max-w-lg border border-slate-400 dark:border-slate-700 rounded-lg dark:bg-[#0d171f]/40 bg-slate-200/30 hover:scale-105 hover:shadow-xl duration-200 my-5 min-w-[280px]"
+              className="flex flex-col justify-start cursor-pointer mx-1 md:mx-5 lg:mx-7 max-w-lg rounded-lg dark:bg-[#0d171f]/80 bg-slate-200/30 hover:translate-y-[-6px] hover:shadow-xl shadow-lg duration-200 my-5 min-w-[280px]"
               href={`/blog/${post.slug}`}
             >
               <>
                 <Image
                   src={`/blog-assets/${post.frontmatter?.cover_image}`}
                   className="w-[435px] h-full rounded-xl mx-auto"
-                  alt={"Cover: "+post.frontmatter.title}
+                  alt={"Cover: " + post.frontmatter.title}
                   height={300}
                   width={435}
                 />
                 <div className="card-body  mx-4 ">
-                  <h3 className="text-lg md:text-2xl font-bold my-2">
+                  <div className="my-3 text-sm ">
+                   
+                    <span className="dark:text-slate-200 text-xs md:text-sm py-[2px] md:py-2 mx-[2px]">
+                      {post.frontmatter.tags?.join(' \u00b7 ' )}
+                    </span>
+                  </div>
+                  <h3 className="text-lg md:text-2xl font-bold my-2 text-gray-900 dark:text-gray-100">
                     {post.frontmatter.title}
                   </h3>
-                  <h6 className="space-x-3 my-3 text-sm ">
-                    {post.frontmatter.tags?.map((tag) => {
-                      return (
-                        <span
-                          key={tag}
-                          className="bg-slate-600 dark:bg-slate-800 text-slate-200 rounded-xl text-xs md:text-sm px-2 md:px-3 py-[2px] md:py-2 mx-[2px]"
-                        >
-                          {tag}
-                        </span>
-                      );
-                    })}
-                  </h6>
-                  <p className=" dark:text-slate-100 text-slate-700 mb-5 font-light text-sm md:text-base">
+
+                  <p className=" dark:text-slate-200 text-slate-700 mb-5 font-light text-sm md:text-base">
                     {post.frontmatter.description}
                   </p>
                 </div>

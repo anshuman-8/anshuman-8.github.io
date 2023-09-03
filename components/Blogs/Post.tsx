@@ -40,7 +40,7 @@ const Post = ({ frontmatter, content }: Props) => {
           <button
             onClick={() => {
               copy(window.location.href);
-              alert("Copied to clipboard");
+              alert("Link copied to clipboard");
             }}
             className="text-lg flex flex-row px-2 py-1 mx-1 space-x-2 items-center border-2 border-slate-200 rounded-lg hover:bg-slate-200 dark:border-slate-400 dark:hover:bg-slate-800 hover:shadow-xl transition-all"
           >
@@ -50,7 +50,7 @@ const Post = ({ frontmatter, content }: Props) => {
         </div>
 
         <BlogHead frontmatter={frontmatter} />
-        <main className="prose-base md:prose-xl md:prose-slate prose-code:overflow-auto prose-code:font-semibold prose-a:underline prose-a:text-blue-600 dark:font-light">
+        <main className="prose-base md:prose-xl md:prose-slate prose-code:overflow-auto prose-code:font-semibold prose-a:underline prose-a:text-blue-600 dark:font-light dark:text-gray-100">
           <div
             dangerouslySetInnerHTML={{
               __html: content
