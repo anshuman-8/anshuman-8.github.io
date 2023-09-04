@@ -51,4 +51,36 @@ I will expand upon this if I read more about it. Knowing this helps us better pr
 
 ---
 
-Well, things are not yet completed; this is my first draft, and I will continue updating and adding things to this list in the future.
+### 3. **Nuclear Semiotics**
+
+For those who don’t know what nuclear semiotics is, it is a thought experiment or problem that people from the last few decade are trying to solve. The problem - As the rate of nuclear energy increases, more nuclear waste is generated, which has to be isolated and disposed of safely, and we have to make sure it is kept away from coming into contact with people. But nuclear waste takes a long time to decompose, so we are not sure if future generations will be intelligent enough to stay away from it.
+
+So how do we tell our great great great (x100) grandchildren that a particular place is contaminated with nuclear waste?
+
+Just putting up a board with "Danger" wont work? As we are not sure if human intelligence will last till then, what if we went through a catastrophe and most humanity is wiped out with its inventions and knowledge?
+
+![](/blog-assets/23-08-17-Few-(may-be-useful)-things-that-I-have-read-3.png "Image showing misunderstood graphics.")
+
+
+Why not use some symbols? But again, how can we be sure that they will understand the actual meaning of the symbol? Because the meaning of a symbol is what we give it.
+
+![](/blog-assets/23-08-17-Few-(may-be-useful)-things-that-I-have-read-4.png "Image showing man digging a pit and getting sick by radiation")
+
+What could they understand from the above image? If you dig a pit deep enough, magical butterflies will come out, and you will be very happy and fall over. (maybe)
+
+Many discussions have taken place, with many suggestions coming up, like having a nuclear priesthood. Religion seems to be the best way to pass information, so having a group of people dedicated to passing down important information seems cool. Another solution was the Ray Cat solution. As cats are ingrained in human culture, why not show them being affected?
+
+![](/blog-assets/23-08-17-Few-(may-be-useful)-things-that-I-have-read-5.png "Image showing a cat getting sick by radiation")
+
+But truly speaking, this looks more like you can colour your cats with these radiations.
+
+One of the most famous solution is **Hostile Architecture.** You can relate it to the NYCs decision to place anti-homeless spikes, it's with the idea of "Why solve the problem when you can torture them until they leave". In the same way HITF suggested the use of hostile architecture to discourage explorers from entering the nuclear deposit and incite a feeling of unease. From giant granite spikes to huge concrete blocks that form narrow streets leading nowhere to a field of razor blades that screech in the wind.
+
+But sometimes such art or design gives humans more reason to explore it.
+
+![](/blog-assets/23-08-17-Few-(may-be-useful)-things-that-I-have-read-6.png "Image showing hostile architecure suggested in the 2002 Desert Space Foundation’s Yucca Nuclear Dumpster Design Competition")
+
+According to me use of emoji would be best - ☢️😱🤮💀
+
+
+---
