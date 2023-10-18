@@ -68,8 +68,9 @@ const Blog = ({ posts }: Props) => {
                     {post.frontmatter.title}
                   </h3>
 
-                  <p className=" dark:text-slate-200 text-slate-700 mb-5 font-light text-sm md:text-base">
-                    {post.frontmatter.description}
+                  <p className="dark:text-slate-300 text-slate-700 mb-5 font-light text-xs md:text-sm max-h-[2.75rem] overflow-hidden line-clamp-2 relative">
+                    {post.frontmatter.description}...
+                    {/* <span className="absolute bottom-0 right-0 bg-white pr-1">...</span> */}
                   </p>
                 </div>
               </>

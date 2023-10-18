@@ -47,7 +47,7 @@ export default function BlogHead({ frontmatter }: FrontmatterProps) {
         <img
           src={`/blog-assets/${frontmatter.cover_image}`}
           alt="post-cover"
-          className="mb-10 shadow-2xl rounded-xl "
+          className="mb-10 shadow-2xl rounded-xl w-fit-content mx-auto "
         />
       </div>
     </header>
