@@ -12,7 +12,7 @@ const Navbar = () => {
   
   return (
     <nav className="md:container mx-auto flex py-6">
-      <div className="px-8 lg:px-24 ">
+      <div className=" mx-auto">
         <Link href="/" className="">
         <a className={`text-3xl md:text-4xl font-bold mx-5 ${isActive('/')}`}>
             Portfolio
@@ -21,6 +21,11 @@ const Navbar = () => {
         <Link href="/blog" className="">
         <a className={`text-3xl md:text-4xl font-bold mx-5 ${isActive('/blog')}`}>
             Blogs
+          </a>
+        </Link>
+        <Link href="/tech" className="">
+        <a className={`text-3xl md:text-4xl font-bold mx-5 ${isActive('/tech')}`}>
+            Projects
           </a>
         </Link>
       </div>

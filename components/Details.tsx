@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ProjectCard from "./ProjectCard";
 import { skills } from "../details/skills";
-import { projects } from "../details/projects";
 
 function Details() {
   return (
@@ -22,23 +20,7 @@ function Details() {
           </p>
         </div>
       </div>
-      <div className="mb-5">
-        <h1 className="text-2xl font-bold mb-2">Projects</h1>
-        <div className="grid md:grid-cols-2">
-          {projects.map((project) => {
-            return (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                description={project.description}
-                tags={project.tags}
-                link={project.link}
-                source={project.source}
-              />
-            );
-          })}
-        </div>
-      </div>
+     
       <div className="mb-3">
         <h1 className="text-2xl font-bold mb-2">Skills</h1>
         <div className="px-2 pt-3 pb-3">

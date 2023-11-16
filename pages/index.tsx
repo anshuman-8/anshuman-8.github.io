@@ -3,13 +3,14 @@ import Profile from "../components/Profile";
 import Details from "../components/Details";
 import Navbar from "../components/Navbar";
 import SEO from "@bradgarropy/next-seo";
+import Information from "../components/Information";
 
 const Home: NextPage = () => {
   return (
     <div className="">
       <SEO
         title="Anshuman Swain"
-        description="Hey, I'm Anshuman Swain, A CSE(AI) undergrad(2025) from India.I like to work on Web & Mobile Apps, and make applications that help people. Checkout my Portfolio and projects that I have made."
+        description="Hey, I'm Anshuman Swain, A CSE(AI) undergrad(2025) from India. AI enthusiast, proficient in Machine Learning, Computer Vision, and developing amazing Web and Mobile apps. Checkout my Portfolio and projects that I have made."
         keywords={[
           "Anshuman",
           "anshuman",
@@ -37,13 +38,11 @@ const Home: NextPage = () => {
       />
       <Navbar />
       <main className="scroll-smooth">
-        <div className="md:container md:mx-auto px-8 lg:px-16">
-          <div className="lg:flex lg:justify-center">
-            <div className=" lg:sticky lg:top-0 pt-8 max-w-[320px] md:mr-10 lg:mr-20 h-min ">
-              <Profile />
-            </div>
-              <Details />
+        <div className=" max-w-[1050px] mx-auto px-10">
+          <div className="lg:top-0 pt-8 h-min ">
+            <Profile />
           </div>
+          <Information />
         </div>
       </main>
 

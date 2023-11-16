@@ -21,10 +21,10 @@ interface Props {
 
 const Blog = ({ posts }: Props) => {
   return (
-    <main>
+    <main className="overflow-auto">
       <SEO
         title="Blog"
-        description="Hey, I'm Anshuman Swain, A CSE(AI) undergrad(2025) from India.I like to work on Web & Mobile Apps, and make applications that help people. Checkout my Portfolio and projects that I have made."
+        description="Hey, I'm Anshuman Swain, A CSE(AI) undergrad(2025) from India. AI enthusiast, proficient in Machine Learning, Computer Vision, and developing amazing Web and Mobile apps. Checkout my Portfolio and projects that I have made."
         keywords={["Blogs", "Anshuman's Blog", "Anshuman's personal blog"]}
         icon={"/favicon.ico"}
         themeColor={"#334155"}
