@@ -11,7 +11,7 @@ const Navbar = () => {
     };
   
   return (
-    <nav className="md:container mx-auto flex py-6">
+    <nav className="md:container mx-auto flex py-6 overflow-y-auto">
       <div className=" mx-auto">
         <Link href="/" className="">
         <a className={`text-3xl md:text-4xl font-bold mx-5 ${isActive('/')}`}>
