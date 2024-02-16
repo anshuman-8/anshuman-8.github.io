@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import ProfileImg from "../public/images/profileImage.jpg";
+import ProfileImg from "../public/images/profileImage.jpeg";
 import { AiOutlineFile } from "react-icons/ai";
 
 function Profile() {
   const onButtonClick = () => {
-    fetch("Anshuman-resume.pdf").then((response) => {
+    fetch("Anshuman_Resume.pdf").then((response) => {
       response.blob().then((blob) => {
         const fileURL = window.URL.createObjectURL(blob);
         let alink = document.createElement("a");
@@ -22,14 +22,14 @@ function Profile() {
         <Image
           src={ProfileImg}
           alt="Anshuman's Image"
-          height={200}
-          width={200}
+          height={230}
+          width={230}
           className="rounded-3xl"
         />
       </div>
       <div className="max-w-[650px]">
         <h1 className="md:text-4xl text-2xl font-bold">Anshuman Swain</h1>
-        <div className="my-3 text-base text-gray-700 dark:text-white">
+        <div className="my-3 text-base text-gray-700 dark:text-slate-200">
           <p className="py-1">20 y/o</p>
           <p>
             A CSE(AI) undergrad(2025) at{" "}
@@ -48,12 +48,12 @@ function Profile() {
               href="https://amfoss.in/"
               className="hover:text-blue-500 underline"
             >
-              amFoss
+              amFOSS
             </a>
           </p>
         </div>
         <button
-          className="mt-3 mb-5 border-2 hover:bg-orange-200 active:bg-orange-100 px-2 py-1 rounded-lg dark:active:bg-slate-500 dark:hover:bg-slate-800 shadow-lg active:shadow-sm flex flex-row items-center"
+          className="mt-3 mb-5 border-2 hover:bg-orange-200 active:bg-orange-100 px-2 py-1 rounded-lg dark:active:bg-slate-500 dark:hover:bg-slate-700 shadow-lg active:shadow-sm flex flex-row items-center"
           onClick={onButtonClick}
         >
           <AiOutlineFile size={20} className="mx-1" />

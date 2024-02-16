@@ -14,19 +14,19 @@ const Navbar = () => {
     <nav className="md:container mx-auto flex py-6 overflow-y-auto">
       <div className=" mx-auto">
         <Link href="/" className="">
-        <a className={`text-3xl md:text-4xl font-bold mx-5 ${isActive('/')}`}>
+        <span className={`text-2xl md:text-4xl hover:cursor-pointer font-bold mx-5 ${isActive('/')}`}>
             Portfolio
-          </a>
+          </span>
         </Link>
         <Link href="/blog" className="">
-        <a className={`text-3xl md:text-4xl font-bold mx-5 ${isActive('/blog')}`}>
+        <span className={`text-2xl md:text-4xl hover:cursor-pointer font-bold mx-5 ${isActive('/blog')}`}>
             Blogs
-          </a>
+          </span>
         </Link>
         <Link href="/tech" className="">
-        <a className={`text-3xl md:text-4xl font-bold mx-5 ${isActive('/tech')}`}>
+        <span className={`text-2xl md:text-4xl hover:cursor-pointer font-bold mx-5 ${isActive('/tech')}`}>
             Projects
-          </a>
+          </span>
         </Link>
       </div>
     </nav>

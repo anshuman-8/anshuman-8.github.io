@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { skills } from "../details/skills";
 
 function Details() {
@@ -26,16 +27,16 @@ function Details() {
         <div className="px-2 pt-3 pb-3">
           {skills.map((skill) => {
             return (
-              <a key={skill.name} className=" px-2 inline hover:mb-2">
+              <div key={skill.name} className=" px-2 inline hover:mb-2">
                 <Image
                   title={skill.name}
                   src={`/images/svg${skill.image}`}
-                  height={"40px"}
-                  width={"40px"}
+                  height={40}
+                  width={40}
                   alt={skill.name}
                   className="duration-100 hover:scale-105"
                 ></Image>
-              </a>
+              </div>
             );
           })}
         </div>

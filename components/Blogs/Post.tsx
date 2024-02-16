@@ -50,7 +50,7 @@ const Post = ({ frontmatter, content }: Props) => {
         </div>
 
         <BlogHead frontmatter={frontmatter} />
-        <main className="prose-base md:prose-xl md:prose-slate prose-code:overflow-auto prose-code:font-semibold prose-a:underline prose-a:text-blue-600 dark:font-light dark:text-gray-100">
+        <main className="prose-base md:prose-xl md:prose-slate prose-code:overflow-auto prose-code:font-semibold prose-a:underline prose-a:text-blue-600 dark:font-light dark:text-gray-300">
           <div
             dangerouslySetInnerHTML={{
               __html: content

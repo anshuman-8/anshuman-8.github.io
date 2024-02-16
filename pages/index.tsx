@@ -19,6 +19,7 @@ const Home: NextPage = () => {
           "Developer",
           "software developer",
           "website",
+          "Anshuman amFOSS",
           "blog",
           "portfolio",
           "Anshuman's personal portfolio",
