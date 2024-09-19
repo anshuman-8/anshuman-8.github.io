@@ -13,16 +13,13 @@ const Home: NextPage = () => {
         description="Hey, I'm Anshuman Swain, A CSE(AI) undergrad(2025) from India. AI enthusiast, proficient in Machine Learning, Computer Vision, and developing amazing Web and Mobile apps. Checkout my Portfolio and projects that I have made."
         keywords={[
           "Anshuman",
-          "anshuman",
           "Anshuman Swain",
           "Anshuman's Portfolio",
-          "Developer",
-          "software developer",
+          "ML-Engineer",
           "website",
           "Anshuman amFOSS",
           "blog",
           "portfolio",
-          "Anshuman's personal portfolio",
         ]}
         icon={"/favicon.ico"}
         themeColor={"#334155"}
