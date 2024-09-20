@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Profile from "../components/Profile";
-import Details from "../components/Details";
 import Navbar from "../components/Navbar";
 import SEO from "@bradgarropy/next-seo";
 import Information from "../components/Information";

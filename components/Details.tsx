@@ -11,7 +11,10 @@ function Details() {
         <div className="text-gray-800 dark:text-slate-50 text-base">
           <p>
             {
-              "I'm a young enthusiast who loves dreaming up exciting new creations, all about bringing cool ideas to life. I can learn things fast and quickly adapt to various domains, from web and mobile development to computer vision and large language models. My curiosity drives me to take on exciting projects, and I'm a general reader who explores topics ranging from philosophy to technology. In my free time, you'll find me enjoying music, delving into philosophical texts, and staying updated on X(Twitter). I'm also dedicated to my fitness, regularly going jogging and hitting the gym when time allows."
+              "Just a enthusiast who loves dreaming up exciting new creations, all about bringing cool ideas to life. I can learn things fast and quickly adapt to various domains, from web and mobile development to computer vision and large language models. My curiosity drives me to take on exciting projects, and I'm particularly interested in research work, which I find deeply rewarding"}
+              </p>
+              <p>{
+              "In my free time, I enjoy listening to music, exploring philosophical texts, and staying updated on X (Twitter). I'm dedicated to fitness, regularly hitting the gym and jogging whenever possible. I'm also a huge fan of Formula 1, drawn by both the thrill of the race and the engineering behind it."
             }
           </p>
           <p className="py-3">

@@ -30,7 +30,7 @@ function Profile() {
       <div className="max-w-[650px]">
         <h1 className="md:text-4xl text-2xl font-bold">Anshuman Swain</h1>
         <div className="my-3 text-base text-gray-700 dark:text-slate-200">
-          <p className="py-1">20 y/o</p>
+          <p className="py-1">21 y/o</p>
           <p>
             A CSE(AI) undergrad(2025) at{" "}
             <a href="https://www.amrita.edu/" className="hover:text-blue-500">
