@@ -10,7 +10,7 @@ import SEO from "@bradgarropy/next-seo";
 
 export default function index() {
   return (
-    <main>
+    <main className="min-h-screen bg-gray-50 dark:bg-slate-900">
       <SEO
         title="Projects"
         description="Hey, I'm Anshuman Swain, A CSE(AI) undergrad(2025) from India. AI enthusiast, proficient in Machine Learning, Computer Vision, and developing amazing Web and Mobile apps. Checkout my Portfolio and projects that I have made."
@@ -29,11 +29,12 @@ export default function index() {
         }}
       />
       <Navbar />
-      <div className="md:container md:mx-auto mx-1 py-4 md:py-10 min-h-max">
-        <div className="grid px-5 md:px-1 lg:grid-cols-3 md:grid-cols-2 lg:mx-6 justify-center">
-
-        {projects.map((project) => {
-          return (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+          Projects
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
             <ProjectCard
               key={project.title}
               title={project.title}
@@ -43,8 +44,7 @@ export default function index() {
               link={project.link}
               source={project.source}
             />
-          );
-        })}
+          ))}
         </div>
       </div>
     </main>

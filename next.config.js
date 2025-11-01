@@ -2,9 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  images:{
-    loader: 'akamai',
-    path: ""
+  images: {
+    domains: [],
+    unoptimized: true
   }
 }
 
@@ -22,8 +22,8 @@ module.exports = nextConfig
 //         disable: process.env.NODE_ENV === 'development',
 // 		skipWaiting: true,
 // 	},
-//   images:{
-//     loader: 'akamai',
-//     path: ""
+//   images: {
+//     domains: [],
+//     unoptimized: true
 //   }
 // });

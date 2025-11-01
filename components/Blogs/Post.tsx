@@ -1,8 +1,8 @@
-import Link from "next/link";
-import copy from "copy-to-clipboard";
-import { CopyIcon } from "../../public/assets/icons";
-import { LeftArrow } from "../../public/assets/icons";
-import BlogHead from "../../components/Blogs/BlogHead";
+import React, { useEffect } from 'react';
+import { createRoot } from 'react-dom/client';
+import BlogHead from './BlogHead';
+import CodeBlock from './CodeBlock';
+import BlogImage from './BlogImage';
 
 interface Props {
   frontmatter: {
@@ -15,55 +15,76 @@ interface Props {
   content: string;
 }
 
-const Post = ({ frontmatter, content }: Props) => {
+const Post: React.FC<Props> = ({ frontmatter, content }) => {
+  // Process content to wrap code blocks with CodeBlock component
+  const processContent = () => {
+    let processedContent = content;
 
-  const codeContent = content.replace(
-    /<pre>(.*?)<\/pre>/gs,
-    (match, p1) =>
-      `<pre class="bg-slate-50 dark:bg-slate-700 overflow-auto">${p1.replace(
-        /<code>/gs,
-        '<code class="text-green-500">'
-      )}</pre>`
-  );
+    // Replace code blocks
+    processedContent = processedContent.replace(
+      /<pre><code class="language-(\w+)">([\s\S]*?)<\/code><\/pre>/g,
+      (_, lang, code) => `<div class="code-block" data-language="${lang}">${code}</div>`
+    );
+
+    // Replace markdown images
+    processedContent = processedContent.replace(
+      /!\[(.*?)\]\((.*?)\)/g,
+      (_, alt, src) => {
+        // Clean up the src path
+        src = src.replace(/^\/+/, '').replace(/^blog-assets\//, '');
+        return `<div class="blog-image" data-src="${src}" data-alt="${alt || ''}"></div>`;
+      }
+    );
+
+    // Replace HTML img tags
+    processedContent = processedContent.replace(
+      /<img.*?src="(.*?)".*?alt="(.*?)".*?>/g,
+      (_, src, alt) => {
+        // Clean up the src path
+        src = src.replace(/^\/+/, '').replace(/^blog-assets\//, '');
+        return `<div class="blog-image" data-src="${src}" data-alt="${alt || ''}"></div>`;
+      }
+    );
+
+    return processedContent;
+  };
+
+  useEffect(() => {
+    const container = document.querySelector('.blog-content');
+    if (!container) return;
+
+    // Replace code blocks with CodeBlock component
+    container.querySelectorAll('.code-block').forEach((block) => {
+      const language = block.getAttribute('data-language') || 'text';
+      const code = block.innerHTML;
+      const wrapper = document.createElement('div');
+      const root = createRoot(wrapper);
+      root.render(<CodeBlock code={code} language={language} />);
+      block.parentNode?.replaceChild(wrapper, block);
+    });
+
+    // Replace images with BlogImage component
+    container.querySelectorAll('.blog-image').forEach((img) => {
+      const src = img.getAttribute('data-src') || '';
+      const alt = img.getAttribute('data-alt') || '';
+      const wrapper = document.createElement('div');
+      const root = createRoot(wrapper);
+      root.render(<BlogImage src={src} alt={alt} />);
+      img.parentNode?.replaceChild(wrapper, img);
+    });
+  }, [content]);
 
   return (
-    <div className="bg-white dark:bg-[#0b1324] my-2 md:my-3 mx-2 p-6 md:py-20 md:pb-28 rounded-xl md:mx-6 md:px-48 shadow-xl min-h-screen">
-      <article>
-        <div className="flex flex-row justify-between">
-          <Link href="/blog">
-            <a className="relative top-2 left-2 flex flex-row items-center space-x-2 text-lg hover:underline w-min px-2">
-              <LeftArrow />
-              <span className="">back</span>
-            </a>
-          </Link>
-
-          <button
-            onClick={() => {
-              copy(window.location.href);
-              alert("Link copied to clipboard");
-            }}
-            className="text-lg flex flex-row px-2 py-1 mx-1 space-x-2 items-center border-2 border-slate-200 rounded-lg hover:bg-slate-200 dark:border-slate-400 dark:hover:bg-slate-800 hover:shadow-xl transition-all"
-          >
-            <CopyIcon className="fill-blue-400"/>
-            <span>Share</span>
-          </button>
-        </div>
-
-        <BlogHead frontmatter={frontmatter} />
-        <main className="prose-base md:prose-xl md:prose-slate prose-code:overflow-auto prose-code:font-semibold prose-a:underline prose-a:text-blue-600 dark:font-light dark:text-gray-300">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: content
-                .replace(
-                  /<pre>/g,
-                  '<pre class="bg-slate-100 dark:bg-slate-800 overflow-auto shadow-inner dark:text-slate-300">'
-                )
-                .replace(/<img>/g, '<img class="rounded-xl shadow-xl">'),
-            }}
-          />
-        </main>
-      </article>
-    </div>
+    <article className="max-w-3xl mx-auto">
+      <BlogHead frontmatter={frontmatter} />
+      
+      <div className="prose prose-lg dark:prose-invert mx-auto mt-8">
+        <div
+          className="blog-content"
+          dangerouslySetInnerHTML={{ __html: processContent() }}
+        />
+      </div>
+    </article>
   );
 };
 

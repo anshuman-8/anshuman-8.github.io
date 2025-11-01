@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 interface IProjects {
   title: string;
@@ -19,48 +20,69 @@ function ProjectCard({
   source,
 }: IProjects) {
   const defaultImage = "/projects/github-default.png";
-
   const imageSrc = image ? image : defaultImage;
 
   return (
-    <div className="bg-white dark:text-gray-300 rounded-xl p-3 md:max-w-[430px] lg:m-3 m-1 shadow-2xl hover:shadow-sm dark:bg-slate-800">
-      <div className="flex flex-col md:flex-row justify-between">
-        <div className="md:w-3/4 ">
-          <Image
-            src={imageSrc}
-            width={180}
-            height={115}
-            alt="Project Image"
-            className="rounded-md object-cover w-full h-full"
-          />
-          <div className="flex-col max-w-[150px] md:mx-auto mt-2 space-y-2">
-            {source && source !== "" && (
+    <div className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl 
+                    transition-all duration-300 w-full max-w-md mx-auto">
+      <div className="relative h-48">
+        <Image
+          src={imageSrc}
+          alt={`${title} preview`}
+          className="object-cover"
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
+      </div>
+      
+      <div className="p-6">
+        <div className="flex justify-between items-start mb-4">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+            {title}
+          </h3>
+          <div className="flex space-x-3">
+            {source && (
               <a
                 href={source}
-                className="flex-shrink-0 block border border-slate-700 dark:border-white py-1 px-2 text-center rounded-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-gray-200 dark:hover:bg-gray-600 active:bg-gray-300 dark:active:bg-gray-700"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white 
+                         transition-colors duration-200"
+                title="View Source"
               >
-                Code
+                <FiGithub className="w-5 h-5" />
               </a>
             )}
-            {link && link !== "" && (
+            {link && (
               <a
                 href={link}
-                className="flex-shrink-0 block border border-slate-700 dark:border-white py-1 px-2 text-center rounded-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-gray-200 dark:hover:bg-gray-600 active:bg-gray-300 dark:active:bg-gray-700"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white 
+                         transition-colors duration-200"
+                title="Visit Project"
               >
-                Visit
+                <FiExternalLink className="w-5 h-5" />
               </a>
             )}
           </div>
         </div>
-        <div className="md:w-2/3 mt-4 md:mt-0 md:ml-4">
-          <p className="text-2xl">{title}</p>
 
-          <p className="text-sm my-2 text-slate-700 dark:text-slate-300">
-            {tags.map((tag, index) => {
-              return tag + (index === tags.length - 1 ? "" : ", ");
-            })}
-          </p>
-          <p className="text-sm">{description}</p>
+        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+          {description}
+        </p>
+
+        <div className="flex flex-wrap gap-2">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              className="px-2 py-1 text-xs font-medium bg-gray-100 dark:bg-slate-700 text-gray-600 
+                       dark:text-gray-300 rounded-full"
+            >
+              {tag}
+            </span>
+          ))}
         </div>
       </div>
     </div>

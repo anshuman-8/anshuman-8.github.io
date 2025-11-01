@@ -1,9 +1,10 @@
 ---
 title: Basic Understanding of Stable Diffusion(No Maths)
-slug: 23-10-16-stable-diffusion-basic-understanding
-description: This is a basic blog on understanding stable diffusion without any math or deep understanding of computer vision.
-date: "16 Oct 2023"
-tags:
+description: >-
+  This is a basic blog on understanding stable diffusion without any math or
+  deep understanding of computer vision.
+date: '2023-10-16'
+category:
   - AI
   - Computer Vision
   - Diffusion
@@ -18,7 +19,7 @@ In short, how stable diffusion works is that we start with noise (a random image
 <!-- 
 ![Untitled](Stable%20Diffusion%20Basic%20Understanding(No%20Maths)%20f6ef52af2293484285c6dee3d6838c38/Untitled%201.png) -->
 
-Let’s dig a bit deeper in the diffusion model. 
+Let's dig a bit deeper in the diffusion model. 
 
 ### Pure Diffusion model
 

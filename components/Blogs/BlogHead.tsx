@@ -1,55 +1,66 @@
-import React from "react";
-import { TagIcon, CalenderIcon } from "../../public/assets/icons";
+import React from 'react';
+import Image from 'next/image';
+import { format } from 'date-fns';
 
-interface FrontmatterProps {
+interface BlogHeadProps {
   frontmatter: {
     title: string;
     date?: string;
     cover_image?: string;
-    tags?: string[];
+    category?: string[];
     description?: string;
   };
 }
 
-export default function BlogHead({ frontmatter }: FrontmatterProps) {
+const BlogHead: React.FC<BlogHeadProps> = ({ frontmatter }) => {
   return (
-    <header>
-      <div className="my-5 flex-col">
-        <div className="prose-base text-base md:text-xl lg:text-2xl text-center mt-8 text-gray-800 dark:text-gray-50 mb-14 leading-relaxed">
-          <h1>{frontmatter.title}</h1>
+    <header className="mb-12">
+      {frontmatter.cover_image && (
+        <div className="relative aspect-[21/9] mb-8 rounded-lg overflow-hidden">
+          <Image
+            src={`/blog-assets/${frontmatter.cover_image}`}
+            alt={frontmatter.title}
+            layout="fill"
+            objectFit="cover"
+            priority
+            className="transition-transform duration-500 hover:scale-105"
+          />
         </div>
+      )}
 
-        <div className="flex flex-row my-5 align-middle">
-          <div>
-            <TagIcon className={"fill-blue-700 dark:fill-blue-400 h-6 w-6"} />
-          </div>
-          <div className="ml-3">
-            {frontmatter.tags?.map((tag) => {
-              return (
-                <span
-                  key={tag}
-                  className="bg-slate-600 text-slate-200 rounded-xl text-sm px-2 md:px-3 py-1 md:py-2 mx-1"
-                >
-                  {tag}
-                </span>
-              );
-            })}
-          </div>
-        </div>
+      <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        {frontmatter.title}
+      </h1>
 
-        <div className="flex flex-row my-5 mb-8">
-          <div className="">
-            <CalenderIcon />
-          </div>
-          <div className="ml-4 font-normal text-lg">{frontmatter.date}</div>
-        </div>
+      {frontmatter.description && (
+        <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
+          {frontmatter.description}
+        </p>
+      )}
 
-        <img
-          src={`/blog-assets/${frontmatter.cover_image}`}
-          alt="post-cover"
-          className="mb-10 shadow-2xl rounded-xl w-fit-content mx-auto "
-        />
+      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+        {frontmatter.date && (
+          <time dateTime={frontmatter.date}>
+            {format(new Date(frontmatter.date), 'MMMM d, yyyy')}
+          </time>
+        )}
+
+        {frontmatter.category && frontmatter.category.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {frontmatter.category.map((cat) => (
+              <span
+                key={cat}
+                className="px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 
+                         text-gray-700 dark:text-gray-300"
+              >
+                {cat}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </header>
   );
-}
+};
+
+export default BlogHead;

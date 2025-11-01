@@ -1,12 +1,14 @@
 ---
 title: My Experience and guide to install Ubuntu
-slug: my-Experience-and-guide-to-install-Ubuntu
-description: Hey there I have recently downloaded ubuntu Linux on my laptop and today and over here I am going to tell you the detailed steps to dual boot ubuntu with windows pc.
-date: "16 Nov 2021"
-tags:
+description: >-
+  Hey there I have recently downloaded ubuntu Linux on my laptop and today and
+  over here I am going to tell you the detailed steps to dual boot ubuntu with
+  windows pc.
+date: '2021-11-15'
+cover_image: ubuntu-dualboot.png
+category:
   - Linux
   - Ubuntu 20.04
-cover_image: ubuntu-dualboot.png
 ---
 
 

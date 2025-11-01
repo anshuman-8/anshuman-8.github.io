@@ -1,28 +1,34 @@
 import React, { useState, useEffect } from 'react';
 
 export default function ReadingBar() {
+  const [height, setHeight] = useState(0);
 
   useEffect(() => {
+    const scrollHeight = () => {
+      const el = document.documentElement;
+      const scrollTop = el.scrollTop || document.body.scrollTop;
+      const scrollHeight = el.scrollHeight || document.body.scrollHeight;
+      const percent = (scrollTop / (scrollHeight - el.clientHeight)) * 100;
+      
+      // Use requestAnimationFrame for smooth animation
+      requestAnimationFrame(() => {
+        setHeight(Math.min(100, Math.max(0, percent)));
+      });
+    };
+
     window.addEventListener('scroll', scrollHeight);
     return () => window.removeEventListener('scroll', scrollHeight);
-  });
-
-  const [height, setHeight] = useState(1);
-
-  // scroll function
-  const scrollHeight = () => {
-    var el = document.documentElement;
-    var ScrollTop = el.scrollTop || document.body.scrollTop;
-    var ScrollHeight = el.scrollHeight || document.body.scrollHeight;
-    var percent = (ScrollTop / (ScrollHeight - el.clientHeight)) * 50;
-    // store percentage in state
-    setHeight(percent);
-  };
+  }, []);
 
   return (
-    <div className='mx-auto px-10 '>
-      <div className="fixed m-3 ml-13 w-1 h-1/2 bg-gray-300 rounded-xl"></div>
-      <div className="fixed m-3 ml-13 w-1 h-screen bg-gradient-to-b from-cyan-800 via-sky-700 to-purple-800 rounded-xl" style={{ height: height + '%' }}></div>
+    <div className="fixed left-0 top-0 z-50 w-full h-1 bg-gray-200 dark:bg-slate-800">
+      <div 
+        className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all duration-150 ease-out"
+        style={{ 
+          width: `${height}%`,
+          boxShadow: `0 0 10px ${height > 0 ? 'rgba(147, 51, 234, 0.5)' : 'transparent'}`
+        }}
+      />
     </div>
   );
 }

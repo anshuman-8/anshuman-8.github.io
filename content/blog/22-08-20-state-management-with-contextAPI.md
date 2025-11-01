@@ -1,13 +1,14 @@
 ---
 title: State Management with Context API
-slug: my-Awesome-Blog-Post
-description: Make state & variables available to all components in react application without prop drilling
-date: "20 Aug 2022"
-tags:
+description: >-
+  Make state & variables available to all components in react application
+  without prop drilling
+date: '2022-08-19'
+cover_image: State-management-with-ContextAPI-in-React-1.png
+category:
   - ContextAPI
   - web
   - React
-cover_image: State-management-with-ContextAPI-in-React-1.png
 ---
 
 ## What is Context API ?

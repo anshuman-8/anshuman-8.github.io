@@ -38,11 +38,20 @@ function MyApp({ Component, pageProps }: AppProps) {
         </div>
 
         {/* <Navbar/> */}
-        <button
-          className="top-7 md:top-12 fixed md:right-16 right-6 bg-slate-500/90 px-3 py-2 rounded-xl z-20 shadow-md"
-          onClick={() => setIsDark(!isDark)}>
-          {!isDark ? <FaSun className="icon" color="#F79B08" size={24} /> : <FaMoon className="icon" color="#F4E34F" size={24}/>}
-        </button>
+        <div className="absolute top-6 right-4 md:right-8 z-50">
+          <button
+            className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 
+                       transition-colors duration-200"
+            onClick={() => setIsDark(!isDark)}
+            aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {!isDark ? (
+              <FaSun className="w-5 h-5 text-amber-500" />
+            ) : (
+              <FaMoon className="w-5 h-5 text-amber-400" />
+            )}
+          </button>
+        </div>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7X62DYQJS"/>
         <Script id="google-analytics" strategy="afterInteractive">
           {`

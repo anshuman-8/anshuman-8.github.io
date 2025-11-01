@@ -1,13 +1,12 @@
 ---
 title: Few (may be useful) things that I have read
-slug: 23-08-17-Few-(may-be-useful)-things-that-I-have-read
 description: These all are random Ideas I have come across recently.
-date: "17 Aug 2023"
-tags:
+date: '2023-08-16'
+cover_image: 23-08-17-Few-(may-be-useful)-things-that-I-have-read.jpg
+category:
   - AI
   - Ideas
   - Philosophy
-cover_image: 23-08-17-Few-(may-be-useful)-things-that-I-have-read.jpg
 ---
 
 ### 1. **Moravec's paradox**

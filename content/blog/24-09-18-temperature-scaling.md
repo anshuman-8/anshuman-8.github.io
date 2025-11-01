@@ -1,13 +1,14 @@
 ---
 title: What is temperature scaling?
-slug: 24-09-18-temperature-scaling
-description: Basic understanding and implimentaion of temperature scaling in machine learning
-date: "18 Sep 2024"
-tags:
+description: >-
+  Basic understanding and implimentaion of temperature scaling in machine
+  learning
+date: '2024-09-17'
+cover_image: 24-09-18-temperature-scaling/temp-scale-banner.png
+category:
   - ML
   - Deep Learning
   - Post-hoc
-cover_image: 24-09-18-temperature-scaling/temp-scale-banner.png
 ---
 
 ### What is temperature scaling (in short)
