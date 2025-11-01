@@ -34,18 +34,18 @@ export default function index() {
         icon={"/favicon.ico"}
         themeColor={"#101b29"}
         facebook={{
-          image: "https://anshuman-8.vercel.app/og-image.png",
-          url: "https://anshuman-8.vercel.app/tech",
+          image: "https://answain.com/og-image.png",
+          url: "https://answain.com/tech",
           type: "website",
         }}
         twitter={{
-          image: "https://anshuman-8.vercel.app/og-image.png",
+          image: "https://answain.com/og-image.png",
           site: "@an8human",
           card: "summary_large_image",
         }}
       />
       <Head>
-        <link rel="canonical" href="https://anshuman-8.vercel.app/tech" />
+        <link rel="canonical" href="https://answain.com/tech" />
       </Head>
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

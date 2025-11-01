@@ -31,18 +31,18 @@ const Home: NextPage = () => {
         icon={"/favicon.ico"}
         themeColor={"#101b29"}
         facebook={{
-          image: "https://anshuman-8.vercel.app/og-image.png",
-          url: "https://anshuman-8.vercel.app/",
+          image: "https://answain.com/og-image.png",
+          url: "https://answain.com/",
           type: "website",
         }}
         twitter={{
-          image: "https://anshuman-8.vercel.app/og-image.png",
+          image: "https://answain.com/og-image.png",
           site: "@an8human",
           card: "summary_large_image",
         }}
       />
       <Head>
-        <link rel="canonical" href="https://anshuman-8.vercel.app/" />
+        <link rel="canonical" href="https://answain.com/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -50,8 +50,8 @@ const Home: NextPage = () => {
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Anshuman Swain",
-              "url": "https://anshuman-8.vercel.app",
-              "image": "https://anshuman-8.vercel.app/og-image.png",
+              "url": "https://answain.com",
+              "image": "https://answain.com/og-image.png",
               "sameAs": [
                 "https://github.com/anshuman-8",
                 "https://twitter.com/an8human",

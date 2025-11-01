@@ -43,8 +43,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Anshuman Swain - AI Engineer specializing in Medical AI and Computer Vision. Currently researching Medical AI for Endoscopy ultrasound image analysis. Expertise in AI, Computer Vision, Machine Learning, and Deep Learning. CSE(AI) undergrad at Amrita Vishwa Vidhyapeetham." />
         <meta name="keywords" content="Anshuman Swain, AI Engineer, Medical AI, Computer Vision, Medical AI Researcher, Computer Vision Engineer, Medical Imaging AI, Endoscopy AI, Ultrasound Image Analysis, Machine Learning, Deep Learning, AI Research, Computer Vision Research" />
-        <meta property="og:image" content="https://anshuman-8.vercel.app/og-image.png" />
-        <meta property="og:image:secure_url" content="https://anshuman-8.vercel.app/og-image.png" />
+        <meta property="og:image" content="https://answain.com/og-image.png" />
+        <meta property="og:image:secure_url" content="https://answain.com/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:author" content="Anshuman Swain" />

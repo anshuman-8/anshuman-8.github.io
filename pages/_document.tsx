@@ -10,7 +10,7 @@ export default function Document() {
         <meta name="theme-color" content="#FFFBF5" media="(prefers-color-scheme: light)" />
         <meta name="author" content="Anshuman Swain" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://anshuman-8.vercel.app" />
+        <link rel="canonical" href="https://answain.com" />
       </Head>
       <body>
         <Main />

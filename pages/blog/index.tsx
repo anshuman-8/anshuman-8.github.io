@@ -44,13 +44,13 @@ const Blog: React.FC<Props> = ({ posts }) => {
         ]}
         icon="/favicon.ico"
         twitter={{
-          image: "https://anshuman-8.vercel.app/og-image.png",
+          image: "https://answain.com/og-image.png",
           site: "@an8human",
           card: "summary_large_image",
         }}
       />
       <Head>
-        <link rel="canonical" href="https://anshuman-8.vercel.app/blog" />
+        <link rel="canonical" href="https://answain.com/blog" />
       </Head>
       <Navbar />
       

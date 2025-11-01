@@ -59,13 +59,13 @@ const BlogPost: React.FC<Props> = ({ frontmatter, content }) => {
         <meta name="author" content="Anshuman Swain" />
         <meta property="og:title" content={frontmatter.title} />
         <meta property="og:description" content={frontmatter.description} />
-        <meta property="og:image" content={`https://anshuman-8.vercel.app/blog-assets/${frontmatter.cover_image}`} />
+        <meta property="og:image" content={`https://answain.com/blog-assets/${frontmatter.cover_image}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://anshuman-8.vercel.app/blog/${router.query.slug || ''}`} />
+        <meta property="og:url" content={`https://answain.com/blog/${router.query.slug || ''}`} />
         {frontmatter.date && (
           <meta property="article:published_time" content={new Date(frontmatter.date).toISOString()} />
         )}
-        <link rel="canonical" href={`https://anshuman-8.vercel.app/blog/${router.query.slug || ''}`} />
+        <link rel="canonical" href={`https://answain.com/blog/${router.query.slug || ''}`} />
       </Head>
 
       <Navbar />
