@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { remark } from 'remark';
 import html from 'remark-html';
 import matter from 'gray-matter';
@@ -22,6 +23,7 @@ interface Props {
 }
 
 const BlogPost: React.FC<Props> = ({ frontmatter, content }) => {
+  const router = useRouter();
   const [progress, setProgress] = useState(2);
 
   useEffect(() => {
@@ -51,14 +53,19 @@ const BlogPost: React.FC<Props> = ({ frontmatter, content }) => {
         }}
       />
       <Head>
-        <title>{frontmatter.title}</title>
+        <title>{frontmatter.title} | Anshuman Swain</title>
         <meta name="description" content={frontmatter.description} />
-        <meta name="keywords" content={frontmatter.category?.join(',')} />
+        <meta name="keywords" content={frontmatter.category?.join(', ')} />
         <meta name="author" content="Anshuman Swain" />
         <meta property="og:title" content={frontmatter.title} />
         <meta property="og:description" content={frontmatter.description} />
-        <meta property="og:image" content={`/blog-assets/${frontmatter.cover_image}`} />
+        <meta property="og:image" content={`https://anshuman-8.vercel.app/blog-assets/${frontmatter.cover_image}`} />
         <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://anshuman-8.vercel.app/blog/${router.query.slug || ''}`} />
+        {frontmatter.date && (
+          <meta property="article:published_time" content={new Date(frontmatter.date).toISOString()} />
+        )}
+        <link rel="canonical" href={`https://anshuman-8.vercel.app/blog/${router.query.slug || ''}`} />
       </Head>
 
       <Navbar />

@@ -22,8 +22,8 @@ const BlogHead: React.FC<BlogHeadProps> = ({ frontmatter }) => {
             alt={frontmatter.title}
             layout="fill"
             objectFit="cover"
-            priority
             className="transition-transform duration-500 hover:scale-105"
+            priority
           />
         </div>
       )}

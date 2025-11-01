@@ -41,7 +41,10 @@ function Profile() {
             A CSE(AI) undergrad(2025) at{" "}
             <a 
               href="https://www.amrita.edu/" 
-              className="text-blue-500 hover:text-blue-600 transition-colors duration-200 font-medium"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 
+                       transition-colors duration-200 font-medium"
             >
               Amrita Vishwa Vidhyapeetham
             </a>
@@ -55,7 +58,10 @@ function Profile() {
             A member at{" "}
             <a
               href="https://amfoss.in/"
-              className="text-blue-500 hover:text-blue-600 transition-colors duration-200 font-medium underline"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 
+                       transition-colors duration-200 font-medium underline"
             >
               amFOSS
             </a>
@@ -64,8 +70,11 @@ function Profile() {
         <button
           className="mt-4 px-6 py-2.5 rounded-lg bg-orange-100 hover:bg-orange-200 dark:bg-slate-800 dark:hover:bg-slate-700 
                      transition-all duration-300 shadow-lg hover:shadow-xl active:shadow-md flex items-center justify-center 
-                     space-x-2 font-medium text-gray-800 dark:text-slate-200"
+                     space-x-2 font-medium text-gray-800 dark:text-slate-200
+                     focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 
+                     dark:focus:ring-offset-slate-900"
           onClick={onButtonClick}
+          aria-label="Download Anshuman Swain's resume as PDF"
         >
           <AiOutlineFile size={20} />
           <span>Download Resume</span>

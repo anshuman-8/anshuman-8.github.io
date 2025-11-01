@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -12,22 +13,40 @@ export default function index() {
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-slate-900">
       <SEO
-        title="Projects"
-        description="Hey, I'm Anshuman Swain, A CSE(AI) undergrad(2025) from India. AI enthusiast, proficient in Machine Learning, Computer Vision, and developing amazing Web and Mobile apps. Checkout my Portfolio and projects that I have made."
-        keywords={["Blogs", "Anshuman's Projects", "Anshuman's personal blog"]}
+        title="AI, Medical AI & Computer Vision Projects | Anshuman Swain"
+        description="Explore my portfolio of AI, Medical AI, and Computer Vision projects. Including Medical AI research tools, Computer Vision models, image recognition systems, LLM-powered applications, and more. Specializing in Medical Imaging AI and Endoscopy analysis."
+        keywords={[
+          "AI Projects",
+          "Medical AI Projects",
+          "Computer Vision Projects",
+          "Medical Imaging AI",
+          "Computer Vision Engineer",
+          "Medical AI Researcher",
+          "Image Recognition",
+          "Deep Learning Projects",
+          "Machine Learning Projects",
+          "Endoscopy AI",
+          "Medical Image Analysis",
+          "Anshuman Swain",
+          "AI Portfolio",
+          "Computer Vision Portfolio"
+        ]}
         icon={"/favicon.ico"}
-        themeColor={"#334155"}
+        themeColor={"#101b29"}
         facebook={{
-          image: "/og-image.png",
-          url: "https://anshuman.8.vercel.app/",
+          image: "https://anshuman-8.vercel.app/og-image.png",
+          url: "https://anshuman-8.vercel.app/tech",
           type: "website",
         }}
         twitter={{
-          image: "/og-image.png",
+          image: "https://anshuman-8.vercel.app/og-image.png",
           site: "@an8human",
           card: "summary_large_image",
         }}
       />
+      <Head>
+        <link rel="canonical" href="https://anshuman-8.vercel.app/tech" />
+      </Head>
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">

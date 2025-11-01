@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -24,16 +25,33 @@ const Blog: React.FC<Props> = ({ posts }) => {
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900">
       <SEO
-        title="Blog | Anshuman Swain"
-        description="Technical blog posts about AI, Machine Learning, Web Development, and more."
-        keywords={["Blog", "Technical Writing", "AI", "Machine Learning", "Web Development"]}
+        title="AI, Medical AI & Computer Vision Blog | Anshuman Swain"
+        description="Technical blog posts about AI, Medical AI, Computer Vision, Machine Learning, and Deep Learning. Learn about Medical AI research, Computer Vision techniques, image analysis, and AI engineering insights from my experiences."
+        keywords={[
+          "AI Blog",
+          "Medical AI Blog",
+          "Computer Vision Blog",
+          "Medical AI Research",
+          "Computer Vision Research",
+          "AI Engineering",
+          "Machine Learning",
+          "Deep Learning",
+          "Medical Imaging AI",
+          "Image Recognition",
+          "Technical Writing",
+          "AI Insights",
+          "Computer Vision Techniques"
+        ]}
         icon="/favicon.ico"
         twitter={{
-          image: "/og-image.png",
+          image: "https://anshuman-8.vercel.app/og-image.png",
           site: "@an8human",
           card: "summary_large_image",
         }}
       />
+      <Head>
+        <link rel="canonical" href="https://anshuman-8.vercel.app/blog" />
+      </Head>
       <Navbar />
       
       <main className="container mx-auto px-4 py-8">
@@ -59,7 +77,7 @@ const Blog: React.FC<Props> = ({ posts }) => {
                       height={400}
                       style={{ objectFit: 'cover' }}
                       className="group-hover:scale-105 transition-transform duration-300"
-                      priority
+                      loading="lazy"
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">

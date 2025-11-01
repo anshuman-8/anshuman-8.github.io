@@ -32,7 +32,7 @@ function ProjectCard({
           className="object-cover"
           layout="fill"
           objectFit="cover"
-          priority
+          loading="lazy"
         />
       </div>
       
