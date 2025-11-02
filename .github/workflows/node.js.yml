@@ -26,12 +26,3 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build
-    - run: npm run export
-    - run: pwd
-    - run: touch ./out/.nojekyll
-    
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        branch: gh-pages
-        folder: out # The folder the action should deploy.
