@@ -1,21 +1,15 @@
-name = "portfolio"
+name = "answain-com"
 compatibility_date = "2024-01-01"
 
 # Cloudflare Pages configuration
-# For standard Next.js build (recommended for Cloudflare Pages with Next.js runtime)
-pages_build_output_dir = ".next"
-
-# Alternative: If using static export, change to:
-# pages_build_output_dir = "out"
+# Using static export output directory (recommended for Cloudflare Pages)
+pages_build_output_dir = "out"
 
 [env.production]
-name = "answain.com"
-pages_build_output_dir = ".next"
+name = "answain-com"
+pages_build_output_dir = "out"
 
 [env.preview]
 name = "answain-com-preview"
-pages_build_output_dir = ".next"
-
-# Note: For static export deployments, change pages_build_output_dir to "out"
-# and use: npm run build && npm run export
+pages_build_output_dir = "out"
 
