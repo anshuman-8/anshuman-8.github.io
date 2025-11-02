@@ -69,20 +69,20 @@ const AboutMe = () => (
     </h2>
     <div className="text-gray-800 dark:text-gray-200 text-lg space-y-4 leading-relaxed">
       <p>
-        I'm an enthusiastic creator passionate about bringing innovative ideas to life through technology. 
+        I&apos;m an enthusiastic creator passionate about bringing innovative ideas to life through technology. 
         My ability to quickly learn and adapt allows me to work across diverse domains—from web and mobile 
-        development to computer vision and large language models. I'm particularly drawn to challenging 
-        research projects and find great satisfaction in pushing the boundaries of what's possible with AI.
+        development to computer vision and large language models. I&apos;m particularly drawn to challenging 
+        research projects and find great satisfaction in pushing the boundaries of what&apos;s possible with AI.
       </p>
       <p>
-        When I'm not coding, you'll find me listening to music, diving into philosophical texts, or keeping 
+        When I&apos;m not coding, you&apos;ll find me listening to music, diving into philosophical texts, or keeping 
         up with the latest tech discussions on X (Twitter). I maintain a dedicated fitness routine, regularly 
-        hitting the gym and going for runs. I'm also an avid Formula 1 fan, captivated by both the high-speed 
+        hitting the gym and going for runs. I&apos;m also an avid Formula 1 fan, captivated by both the high-speed 
         racing and the cutting-edge engineering that makes it all possible.
       </p>
       <p>
-        I'm driven by a desire to make meaningful contributions to the world through technology. Currently, 
-        I'm deeply engaged in Medical AI research, focusing on endoscopy ultrasound image analysis to improve 
+        I&apos;m driven by a desire to make meaningful contributions to the world through technology. Currently, 
+        I&apos;m deeply engaged in Medical AI research, focusing on endoscopy ultrasound image analysis to improve 
         healthcare outcomes.
       </p>
     </div>
