@@ -55,11 +55,11 @@ const BlogImage: React.FC<BlogImageProps> = ({ src, alt, caption }) => {
           <Image
             src={imageSrc}
             alt={alt}
-            layout={isZoomed ? "fill" : "fill"}
-            objectFit="contain"
-            className={`rounded-lg ${
+            fill
+            className={`object-contain rounded-lg ${
               !isZoomed ? 'hover:scale-105 transition-transform duration-300' : ''
             }`}
+            sizes={isZoomed ? "100vw" : "(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"}
             quality={isZoomed ? 100 : 75}
             priority={isZoomed}
             onError={() => setError(true)}

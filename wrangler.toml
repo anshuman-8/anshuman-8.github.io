@@ -1,15 +1,32 @@
+# Cloudflare Workers configuration
+# Used when deploying with @opennextjs/cloudflare (SSR support)
+# See: https://developers.cloudflare.com/workers/framework-guides/web-apps/nextjs/
 name = "answain-com"
-compatibility_date = "2024-01-01"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
 
-# Cloudflare Pages configuration
-# Using static export output directory (recommended for Cloudflare Pages)
+# Workers deployment (for SSR/API routes)
+main = ".open-next/worker.js"
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+# Cloudflare Pages configuration (for static export)
+# Used when deploying static export to Cloudflare Pages
 pages_build_output_dir = "out"
 
 [env.production]
 name = "answain-com"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+main = ".open-next/worker.js"
 pages_build_output_dir = "out"
 
 [env.preview]
 name = "answain-com-preview"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+main = ".open-next/worker.js"
 pages_build_output_dir = "out"
 

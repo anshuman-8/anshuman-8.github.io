@@ -33,8 +33,10 @@ yarn-error.log*
 
 # cloudflare/wrangler
 .wrangler/
+.open-next/
 .dev.vars
 wrangler.toml.bak
+cloudflare-env.d.ts
 
 # typescript
 *.tsbuildinfo

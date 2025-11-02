@@ -20,9 +20,9 @@ const BlogHead: React.FC<BlogHeadProps> = ({ frontmatter }) => {
           <Image
             src={`/blog-assets/${frontmatter.cover_image}`}
             alt={frontmatter.title}
-            layout="fill"
-            objectFit="cover"
-            className="transition-transform duration-500 hover:scale-105"
+            fill
+            className="object-cover transition-transform duration-500 hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
             priority
           />
         </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { remark } from 'remark';
-import html from 'remark-html';
+import remarkHtml from 'remark-html';
 import matter from 'gray-matter';
 import fs from 'fs';
 import path from 'path';
@@ -107,7 +107,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
   const { data, content } = matter(markdownWithMetadata);
   const processedContent = await remark()
-    .use(html)
+    .use(remarkHtml)
     .process(content);
 
   return {
